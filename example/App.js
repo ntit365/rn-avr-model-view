@@ -45,8 +45,9 @@ export class App extends Component {
               this.modelView = modelView;
             }}
             style={styles.modelView}
+            scale={0.6}
             source={{
-            zip: 'https://embed.avr.asia/demo/sofa01/Sofa_01.zip',
+              zip: 'https://embed.avr.asia/demo/sofa01/Sofa_01.zip',
               // zip:
               //   'https://github.com/BonnierNews/react-native-3d-model-view/blob/master/example/obj/Hamburger.zip?raw=true',
               // unzippedFolderName: 'Hamburger',
@@ -70,12 +71,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   modelContainer: {
-    padding: 10,
     width: '100%',
   },
   modelView: {
     width: '100%',
-    height: 300,
+    height: '100%',
     backgroundColor: 'white',
   },
   buttonContainer: {
