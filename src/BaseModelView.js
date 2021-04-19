@@ -110,7 +110,6 @@ class BaseModelView extends React.Component {
     return RNFS.mkdir(DOCUMENTS_FOLDER).then(() => {
       const name = this.getName(uri);
       const targetPath = `${DOCUMENTS_FOLDER}/${name}`;
-      console.log(targetPath);
       return RNFS.exists(targetPath).then((exists) => {
         if (exists) {
           return targetPath;
