@@ -108,8 +108,7 @@
     MDLMesh* object = (MDLMesh *)[asset objectAtIndex:0];
     MDLScatteringFunction *scatteringFunction = [MDLScatteringFunction new];
     MDLMaterial *material = [[MDLMaterial alloc] initWithName:@"baseMaterial" scatteringFunction:scatteringFunction];
-    MDLMaterialProperty* baseColor = [MDLMaterialProperty new];
-    [baseColor setSemantic:MDLMaterialSemanticBaseColor];
+    MDLMaterialProperty* baseColor = [[MDLMaterialProperty alloc] initWithName:@"baseColor" semantic:MDLMaterialSemanticBaseColor];
     if (textureUrl) {
         [baseColor setType:MDLMaterialPropertyTypeTexture];
         [baseColor setURLValue:textureUrl];
